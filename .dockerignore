@@ -1,0 +1,8 @@
+# flyctl launch added from .gitignore
+**/*.db
+**/*.db-journal
+**/*.db-wal
+**/*.db-shm
+**/.env
+**/diplomacy-bot
+fly.toml
