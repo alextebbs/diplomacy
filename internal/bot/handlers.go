@@ -660,8 +660,8 @@ func (b *Bot) handleVersion(s *discordgo.Session, i *discordgo.InteractionCreate
 	msg := fmt.Sprintf("**Diplomacy Bot**\nBinary SHA-256:\n```\n%s\n```\nGo: `%s` | OS/Arch: `%s/%s`",
 		bi.BinaryHash, bi.GoVersion, bi.GOOS, bi.GOARCH)
 
-	msg += "\n\nTo verify, clone the repo and run:\n" +
-		"```\n./verify.sh " + bi.BinaryHash + "\n```"
+	msg += "\n\nTo verify:\n" +
+		"```\ngit clone https://github.com/alextebbs/diplomacy.git\ncd diplomacy\n./verify.sh " + bi.BinaryHash + "\n```"
 
 	respond(s, i, msg)
 }
